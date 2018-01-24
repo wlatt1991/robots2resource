@@ -5,15 +5,12 @@
  * robots.txt в ресурсе
  *
  * @category	snippet
+ * @version 	1.0
+ * @license 	http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
+ * @author      Wlatt1991
  * @internal	@properties
- * @internal	@modx_category My Store
- * @internal    @installset base, sample
+ * @internal	@modx_category add
+ * @internal    @installset base
  */
- 
-$site_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on') ? 'https' : 'http').'://'.$_SERVER['SERVER_NAME'].'/';
 
-$out .= "User-agent: *".PHP_EOL;
-$out .= "Sitemap: ".$site_url."sitemap.xml".PHP_EOL;
-$out .= "Host: " . $site_url;
-
-return $out;
+return require MODX_BASE_PATH.'assets/snippets/robots2resource/snippet.robots2resource.php';
